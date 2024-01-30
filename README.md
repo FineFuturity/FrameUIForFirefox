@@ -1,5 +1,5 @@
 # Codename: FrameUI For Firefox
-A new way to view your web content.  Almost as if websites were printed from an old Polaroid camera.
+A new way to view your web content, like looking at photos printed from an old Polaroid camera.
 
 ![a1fd4499dd2be9a2ecccc660a6ce0696](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/75c5a475-d440-4481-a002-9cdb754155ed)
 
