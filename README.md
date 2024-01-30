@@ -4,7 +4,6 @@ A new way to view your web content.
 # Screenshots
 ![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/73b7328d-3b6c-47f6-b4fe-d341aa46b88b)
 ![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/ed6123fd-b6fd-4124-b264-a83468fa1bc8)
-![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/8503ccef-c426-4777-bd58-eddde4ed9784)
 ![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/46c7abc3-43ad-4bfd-8470-2b8e3034dd5a)
 
 # Prerequisites
