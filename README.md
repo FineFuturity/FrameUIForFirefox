@@ -20,9 +20,9 @@ NOTE: AS OF RIGHT NOW, THIS IS ONLY COMPATIBLE WITH **WINDOWS** AND **LINUX**.  
 Simply drop the provided `userChrome.css` file into your `chrome` folder and restart for the changes to take effect.
 
 # Motivation
-After restarting, you'll notice that *all* of the controls -- the navigation bar, the window controls, *everything* -- has been moved to the bottom in a manner reminiscent of the Metro-based Internet Explorer app seen in Windows 8/8.1.  While I think Microsoft was on the right track with their attempts at a tablet-based interface... well, we all know what happened.  And apart from Microsoft, I think no company to this day has yet to get right.
+After restarting, you'll notice that *all* of the controls -- the navigation bar, the window controls, *everything* -- has been moved to the bottom in a manner reminiscent of the Metro-based Internet Explorer app seen in Windows 8/8.1.  While I think Microsoft was on the right track with their attempts at a tablet-based interface... well, we all know what happened.  Apart from Microsoft (which was a half-done attempt anyway), I think no company to this day has yet to get right.
 
-This theme is a step towards what I believe may solve the grand problem of unifying the desktop and tablet interface for ANY device form factor.  What I hope you'll find is that this interface works really well on *both* tablet and desktop form factors, precisely because there is no longer a need for a user to lift their arms to get to something as basic as the window controls.  They're now just a mere finger reach away.
+This theme is a step towards what I believe may solve the grand problem of unifying the desktop and tablet interface for ANY device form factor.  What I hope you'll find is that this interface works really well on *both* tablet and desktop form factors, precisely because there is no longer a need for a user to lift their arms to get to something as basic as the window controls -- they're now just a mere finger reach away.  
 
 # Reporting Issues
 FYI, this project is my first go at using CSS.  As this is the initial release on top of that, I anticipate there will be issues.  If you encounter any bugs or other issues, please post a thread and I'll do what I can, when I can. 
