@@ -14,7 +14,7 @@ To make the most of this theme, it is **STRONGLY recommended** that you install 
 Simply drop the provided `userChrome.css` file into your `chrome` folder and restart for the changes to take effect.
 
 # Motivation
-After restarting, you'll notice that *all* of the controls -- the navigation bar, the window controls, *everything* -- has been moved to the bottom.  You'll find that this interface works really well on *both* tablet and desktop form factors: something I think no company to this day has yet to get right.
+After restarting, you'll notice that *all* of the controls -- the navigation bar, the window controls, *everything* -- has been moved to the bottom, reminiscent of the Metro-based Internet Explorer app seen in Windows 8/8.1.  What you'll find is that this interface works really well on *both* tablet and desktop form factors.  And while I think Microsoft was on the right track with their attempt at a tablet-based interface... well, we all know what happened.  And that's why I think no company to this day has yet to get right.
 
 This theme is a step towards what I believe may solve the grand problem of unifying the desktop and tablet interface for ANY device form factor.
 
