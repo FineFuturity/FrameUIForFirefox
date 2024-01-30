@@ -24,7 +24,7 @@ After restarting, you'll notice that *all* of the controls -- the navigation bar
 
 This theme is a step towards what I believe may solve the grand problem of unifying the desktop and tablet interface for ANY device form factor.  What I hope you'll find is that this interface works really well on *both* tablet and desktop form factors, precisely because there is no longer a need for a user to lift their arms to get to something as basic as the window controls.  They're now just a mere finger reach away.
 
-#Reporting Issues
+# Reporting Issues
 FYI, this project is my first go at using CSS.  As this is the initial release on top of that, I anticipate there will be issues.  If you encounter any bugs or other issues, please post a thread and I'll do what I can, when I can. 
 
 Also: as this theme is a both a thought experiment and work in progress, it is possible the look and feel will change over time.  I welcome any and all suggestions for how this could be improved.  :)
