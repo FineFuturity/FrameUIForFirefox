@@ -11,7 +11,10 @@ A new way to view your web content, like looking at photos printed from an old P
 
 # Prerequisites
 
-To make the most of this theme, it is **STRONGLY recommended** that you install an addon for vertical tabs, such as Tab Center Reborn.  
+NOTE: AS OF RIGHT NOW, THIS IS ONLY COMPATIBLE WITH **WINDOWS** AND **LINUX**.  MACOS IS STILL A WORK IN PROGRESS AS I DO NOT HAVE ACCESS TO A MAC AT THIS TIME.
+* Another note: if you're on Linux, make sure your window controls are set to the right side of your title bar.
+
+To make the most of this theme, it is **STRONGLY recommended** that you install an addon for vertical tabs, such as Tab Center Reborn. 
 
 # Installation
 Simply drop the provided `userChrome.css` file into your `chrome` folder and restart for the changes to take effect.
