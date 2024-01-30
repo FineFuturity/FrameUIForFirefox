@@ -1,0 +1,76 @@
+.tabbrowser-tab {
+	display:none
+}
+
+.titlebar-spacer {
+	display:none;
+}
+
+#tabbrowser-arrowscrollbox-periphery {
+	display:none;
+}
+
+#firefox-view-button {
+	visibility: collapse;
+}
+
+#navigator-toolbox {
+	-moz-box-ordinal-group: 1 !important;
+	order: 1 !important;
+}
+
+/* #titlebar {
+	-moz-box-ordinal-group: 2 !important;
+	order: 2 !important;
+}
+ */
+
+
+#urlbar-container{
+	-moz-transform: scale(-1, -1);
+	-o-transform: scale(-1,-1);
+	-webkit-transform: scale(-1,-1);
+	transform: scale(-1,-1);
+
+}
+
+#urlbar{
+	-moz-transform: scale(-1, -1);
+	-o-transform: scale(-1,-1);
+	-webkit-transform: scale(-1,-1);
+	transform: scale(-1,-1);
+}
+
+/* for Windows or Linux configs where title bar controls are on the right side */
+/* #titlebar {display: bottom} */
+/* #titlebar { display:none; } */
+
+#nav-bar {
+	margin-top: -36px;
+	margin-right: 140px;
+}
+
+#alltabs-button{
+	margin-top: 18px;
+}
+
+.tabs-alltabs-button {
+		display:none;
+}
+
+.titlebar-color {
+	background-color: var(--toolbar-bgcolor);
+}
+
+/* .titlebar-buttonbox {
+	border: darkgrey;
+} */
+
+#titlebar {
+	margin-bottom:-6px;
+	border-color:black;
+	border-top-style:solid;
+	border-width:1px;
+	height:43px;
+	
+}
