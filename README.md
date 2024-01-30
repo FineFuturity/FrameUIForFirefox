@@ -1,6 +1,12 @@
 # FrameUIForFirefox
 A new way to view your web content.
 
+# Screenshots
+![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/73b7328d-3b6c-47f6-b4fe-d341aa46b88b)
+![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/ed6123fd-b6fd-4124-b264-a83468fa1bc8)
+![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/8503ccef-c426-4777-bd58-eddde4ed9784)
+![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/46c7abc3-43ad-4bfd-8470-2b8e3034dd5a)
+
 # Prerequisites
 
 To make the most of this theme, it is **STRONGLY recommended** that you install an addon for vertical tabs, such as Tab Center Reborn.  
@@ -14,5 +20,7 @@ After restarting, you'll notice that *all* of the controls -- the navigation bar
 This theme is a step towards what I believe may solve the grand problem of unifying the desktop and tablet interface for ANY device form factor.
 
 #Reporting Issues
-This project is my first go at using CSS.  As this is the initial release on top of that, I anticipate there will be issues.  If you encounter any bugs or other issues, please post a thread and I'll do what I can, when I can. 
+FYI, this project is my first go at using CSS.  As this is the initial release on top of that, I anticipate there will be issues.  If you encounter any bugs or other issues, please post a thread and I'll do what I can, when I can. 
+
+Also: as this theme is a both a thought experiment and work in progress, it is possible the look and feel will change over time.  I welcome any and all suggestions for how this could be improved.  :)
 
