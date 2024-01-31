@@ -3,6 +3,22 @@ A new way to view your web content, like looking at photos printed from an old P
 
 ![a1fd4499dd2be9a2ecccc660a6ce0696](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/75c5a475-d440-4481-a002-9cdb754155ed)
 
+# Changelog
+**Version 0.2:**
+* Initial macOS support.
+  * Platform detection has been added, so the theme now accounts for configurations where either the title bar buttons are on the left (e.g., macOS/Linux title bar buttons on left) or on the right (e.g, Windows/Linux title bar buttons on right).
+* Fixed issue with user-selected themes either working inconsistently or not at all.
+* Inactive window title bars are now darker to differentiate them from the active window.
+ 
+**Version 0.1:**
+* Initial release
+
+# Known Issues
+**Windows:**
+* Haven't found any just yet.  Please report if you find any. :)
+
+**macOS:**
+* FrameUI was designed to have the window control buttons on the bottom. However, due to the way that fullscreen windows work on macOS, the window control buttons will remain at the top of the window like other macOS apps. This complication is not present in windowed mode.
 
 # Screenshots
 ![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/73b7328d-3b6c-47f6-b4fe-d341aa46b88b)
@@ -15,7 +31,6 @@ A new way to view your web content, like looking at photos printed from an old P
 * If you're on Linux, make sure your window controls are set to be on the right side of your title bar.
 
 # Installation
-NOTE: AS OF RIGHT NOW, THIS IS ONLY COMPATIBLE WITH **WINDOWS** AND **LINUX**.  MACOS IS STILL A WORK IN PROGRESS AS I DO NOT HAVE ACCESS TO A MAC AT THIS TIME.
 
 Simply drop the provided `userChrome.css` file into your `chrome` folder and restart for the changes to take effect.
 
