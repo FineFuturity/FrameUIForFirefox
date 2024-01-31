@@ -23,7 +23,16 @@ A new way to view your web content, like looking at photos printed from an old P
 # Screenshots
 ![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/73b7328d-3b6c-47f6-b4fe-d341aa46b88b)
 ![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/ed6123fd-b6fd-4124-b264-a83468fa1bc8)
+![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/3b7a9f63-6cae-43de-bfb0-d07fd28b8d10)
 ![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/46c7abc3-43ad-4bfd-8470-2b8e3034dd5a)
+
+<h4>Now with theme support!</h4>
+
+![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/17ade781-524a-49e5-99d7-c8b72ceb131a)
+![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/3dba5c46-b83f-4877-b289-67b5aa9949c0)
+![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/2beeeb4b-99d6-4316-87cf-ca461f959516)
+
+
 
 # Prerequisites
 * For this to work, make sure `toolkit.legacyUserProfileCustomizations.stylesheets` is set to `true` in `about:config`.
