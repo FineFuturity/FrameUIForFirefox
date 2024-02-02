@@ -68,7 +68,6 @@
 }
 
 #toolbar-menubar:not([customizing]){
-  background:orange;
   
   .titlebar-buttonbox {
     padding-bottom:39px;
@@ -78,7 +77,6 @@
 }
 
 #toolbar-menubar[customizing]{
-  background:orange;
   margin-bottom:1px;
   .titlebar-buttonbox {
 /*     margin-top:-3px; */
