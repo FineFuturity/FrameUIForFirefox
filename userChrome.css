@@ -6,12 +6,15 @@
   opacity:0.25 !important;
 /* 	margin-bottom:-1px; */
 }
-/* .titlebar-buttonbox, .titlebar-buttonbox-container {
-	display:inline
-} */
+
+:root #titlebar:-moz-window-active {
+  opacity:0.25 !important;
+/*   margin-bottom:-1px; */
+/* 	margin-bottom:-1px; */
+}
 
 #navigator-toolbox {
-		  --toolbar-bgcolor: transparent;
+	--toolbar-bgcolor: transparent;
 }
 
 .titlebar-color {
@@ -22,8 +25,8 @@
 	margin-top: 5px;
 /* 	margin-bottom:40px; */
 	margin-left: 10px;
-}
-
+  margin-bottom:4px;
+} 
 
 /* hide sidebar header so vertical tabs look native */
 #sidebar-header{ display: none }
@@ -40,11 +43,8 @@
 	display:none;
 }
 
-@media (-moz-platform: windows) {
-	#nav-bar {
+#nav-bar {
 			margin-right: 138px;
-		
-  }
 }
 
 #urlbar-container{
@@ -61,6 +61,33 @@
 	transform: scale(-1,-1);
 }
 
+@media (-moz-platform: windows) {
+	#nav-bar {
+			margin-right: 140px;
+  }
+}
+
+#toolbar-menubar:not([customizing]){
+  background:orange;
+  
+  .titlebar-buttonbox {
+    padding-bottom:39px;
+    padding-top:28px;
+    
+  }
+}
+
+#toolbar-menubar[customizing]{
+  background:orange;
+  margin-bottom:1px;
+  .titlebar-buttonbox {
+/*     margin-top:-3px; */
+/*     margin-top:-20px; */
+    padding-bottom:39px;
+    padding-top:28px;
+  }
+  
+}
 #PersonalToolbar {
 	-moz-box-ordinal-group: -1 !important;
 	order: -1 !important;
@@ -90,8 +117,20 @@
 	height:-41px;
 }
 
-/*sidebar hover hack*/
+#main-window[privatebrowsingmode="temporary"] #nav-bar {
+  margin-right:160px;
+}
 
+#main-window[privatebrowsingmode="temporary"] #private-browsing-indicator-with-label > label { display: none; }
+
+
+#main-window[privatebrowsingmode="temporary"] .private-browsing-indicator-icon {
+  margin-bottom: -40px;
+}
+
+
+
+/* ======= =sidebar hover hack =======*/
 #sidebar-box{
   --uc-sidebar-width: 35px;
   --uc-sidebar-hover-width: 210px;
@@ -175,13 +214,4 @@
   border-left-style: solid !important; 
 }
 
-
-
-
-
-
-
-
-
-
-
+/* ======= =sidebar hover hack =======*/
