@@ -1,130 +1,115 @@
-/* make everything transparent when window is inactive */
-:root #menubar-items:-moz-window-inactive,
-:root #nav-bar:-moz-window-inactive,
-:root #PersonalToolbar:-moz-window-inactive,
-:root #titlebar:-moz-window-inactive {
-  opacity:0.25 !important;
-/* 	margin-bottom:-1px; */
+/* #toolbar-menubar {
+  height:44px !important;
+/  z-index: 3 !important; 
+  margin-top: -58px !important;
+  z-index: 2 !important;
+} */
+
+
+/* Prepare nav bar for window button controls */
+#nav-bar { 
+  padding-right:140px !important;
+  z-index: 1 !important;
 }
 
-:root #titlebar:-moz-window-active {
-  opacity:0.25 !important;
-/*   margin-bottom:-1px; */
-/* 	margin-bottom:-1px; */
+.titlebar-buttonbox-container {
+/*   background: blue !important; */
+  z-index: 3 !important;
+  margin-left:-152px !important;
 }
+/* ======================================================================= */
 
-#navigator-toolbox {
-	--toolbar-bgcolor: transparent;
+/* Move bookmarks bar to top of the navigator toolbox before move to bttm */
+#PersonalToolbar {
+  -moz-box-ordinal-group: -1 !important;
+	order: -1 !important;
 }
+/* ======================================================================= */
 
-.titlebar-color {
-	background-color: var(--toolbar-bgcolor);
-}
-
-#menubar-items {
-	margin-top: 5px;
-/* 	margin-bottom:40px; */
-	margin-left: 10px;
-  margin-bottom:4px;
-} 
-
-/* hide sidebar header so vertical tabs look native */
-#sidebar-header{ display: none }
-
-.tabs-alltabs-button {
-		display:none;
-}
-
-#firefox-view-button {
-	display:none;
-}
-
-#tabbrowser-tabs {
-	display:none;
-}
-
-#nav-bar {
-			margin-right: 138px;
-}
-
+/* flip url bar contents so it displays properly when moving to bottom */
 #urlbar-container{
-	-moz-transform: scale(-1, -1);
-	-o-transform: scale(-1,-1);
-	-webkit-transform: scale(-1,-1);
-	transform: scale(-1,-1);
+	-moz-transform: scale(-1, -1) !important;
+	-o-transform: scale(-1,-1) !important;
+	-webkit-transform: scale(-1,-1) !important;
+	transform: scale(-1,-1) !important;
 }
 
 #urlbar{
-	-moz-transform: scale(-1, -1);
-	-o-transform: scale(-1,-1);
-	-webkit-transform: scale(-1,-1);
-	transform: scale(-1,-1);
+	-moz-transform: scale(-1, -1) !important;
+	-o-transform: scale(-1,-1) !important;
+	-webkit-transform: scale(-1,-1) !important;
+	transform: scale(-1,-1) !important;
 }
 
-@media (-moz-platform: windows) {
-	#nav-bar {
-			margin-right: 140px;
-  }
-}
+/* ======================================================================= */
 
-#toolbar-menubar:not([customizing]){
-  
-  .titlebar-buttonbox {
-    padding-bottom:39px;
-    padding-top:28px;
-    
-  }
-}
-
-#toolbar-menubar[customizing]{
-  margin-bottom:1px;
-  .titlebar-buttonbox {
-/*     margin-top:-3px; */
-/*     margin-top:-20px; */
-    padding-bottom:39px;
-    padding-top:28px;
-  }
-  
-}
-#PersonalToolbar {
-	-moz-box-ordinal-group: -1 !important;
-	order: -1 !important;
-}
-
+/* ====== MOVE EVERYTHING TO THE BOTTOM, DO NOT EDIT THIS ====== */
 #navigator-toolbox {
 	-moz-box-ordinal-group: 1 !important;
 	order: 1 !important;
 }
+/* ======================================================================= */
+
+/* hide all contents of tab bar EXCEPT tab bar itself */
+#TabsToolbar tab,
+#TabsToolbar-customization-target,
+#firefox-view-button,
+.tabs-alltabs-button {
+    visibility: hidden !important;
+    background: var(--toolbar-bgcolor) !important;
+}
+/* ======================================================================= */
+
+/* allow tab bar to appear over nav bar */
+#TabsToolbar {
+/*   width:1499px !important; */
+  margin-left:1361px !important;
+/*   margin-right: 1000px !important; */
+/*   background: orange !important; */
+  z-index: 2 !important;
+  margin-bottom: -42px;
+}
+/* ======================================================================= */
+
+/* hide sidebar header so vertical tabs look native */
+#sidebar-header{ display: none }
+/* ======================================================================= */
+
+/* make everything transparent when window is inactive */
+:root #navigator-toolbox:-moz-window-inactive {
+  opacity:0.25 !important;
+}
+/* ======================================================================= */
+
+/* Get user theme to show through on nav bar and bookmarks bar*/
+:root #nav-bar,
+:root #PersonalToolbar{
+  background: var(--toolbar-bg) !important;
+/*    background: green !important; */
+}
 
 :root[BookmarksToolbarOverlapsBrowser] .newTabBrowserPanel {
-	margin-top:-28px;
+	visibility:visible !important;
+}
+/* ======================================================================= */
+
+/* fix issue with bottom of window getting cut off when going into new tab */
+:root[BookmarksToolbarOverlapsBrowser] .newTabBrowserPanel {
+	margin-top:-28px !important;
+/*   background: orange !important; */
 	
 }
 
 :root[BookmarksToolbarOverlapsBrowser] #sidebar-box {
-	margin-top:-28px;
+	margin-top:-28px !important; 
+/*   background:orange !important; */
 }
 
 :root[BookmarksToolbarOverlapsBrowser] #nav-bar {
    margin-bottom:28px; !important;
 }
+/* ======================================================================= */
 
-.titlebar-buttonbox, .titlebar-buttonbox-container {
-	background-color: var(--toolbar-bgcolor);
-	margin-bottom:-41px;
-	height:-41px;
-}
-
-#main-window[privatebrowsingmode="temporary"] #nav-bar {
-  margin-right:160px;
-}
-
-#main-window[privatebrowsingmode="temporary"] #private-browsing-indicator-with-label > label { display: none; }
-
-
-#main-window[privatebrowsingmode="temporary"] .private-browsing-indicator-icon {
-  margin-bottom: -40px;
-}
 
 
 
