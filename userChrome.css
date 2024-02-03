@@ -1,20 +1,24 @@
-/* #toolbar-menubar {
-  height:44px !important;
-/  z-index: 3 !important; 
-  margin-top: -58px !important;
-  z-index: 2 !important;
-} */
-
 
 /* Prepare nav bar for window button controls */
 #nav-bar { 
   padding-right:140px !important;
-  z-index: 1 !important;
+  z-index: 7 !important;
 }
 
+
+/* #toolbar-menubar #menubar-items {
+  background: orange !important;
+} */
+
+/* #toolbar-menubar .titlebar-button {
+  z-index: 1001 !important;
+} */
+
+
 .titlebar-buttonbox-container {
-/*   background: blue !important; */
-  z-index: 3 !important;
+/*   background: orange !important; */
+  
+/*   z-index: 1 !important; */
   margin-left:-152px !important;
 }
 /* ======================================================================= */
@@ -66,7 +70,7 @@
   margin-left:1361px !important;
 /*   margin-right: 1000px !important; */
 /*   background: orange !important; */
-  z-index: 2 !important;
+  z-index: 1000 !important;
   margin-bottom: -42px;
 }
 /* ======================================================================= */
@@ -110,8 +114,29 @@
 }
 /* ======================================================================= */
 
+/* Get toolbar configured such that the title bar buttons on there appear p much exactly over the ones on the tab bar */
+/* this gives the illusion that the title bar buttons don't move when the menu bar appears. */
+#toolbar-menubar #menubar-items{
 
+  padding-top:5px !important;
+  padding-left: 10px !important;
+  margin-bottom:-42px !important;
+}
 
+#toolbar-menubar .titlebar-buttonbox {
+/*   background: blue !important; */
+/*   padding-top: 5px !important; */
+  z-index:10000 !important;
+/*   padding-bottom:5px; */
+  margin-bottom:-62px !important;
+}
+/* ======================================================================= */
+
+/*for now, hide the private browsing icon and label until i figure out how to move it to where i want */
+#private-browsing-indicator-with-label {
+  display: none !important;
+}
+/* ======================================================================= */
 
 /* ======= =sidebar hover hack =======*/
 #sidebar-box{
