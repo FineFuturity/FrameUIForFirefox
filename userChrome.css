@@ -1,101 +1,223 @@
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/window_control_placeholder_support.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
 
-/* Prepare nav bar for window button controls */
-#nav-bar { 
-  padding-right:140px !important;
-  z-index: 7 !important;
+/* Creates placeholders for window controls */
+/* This is a supporting file used by other stylesheets */
+
+/* This stylesheet is pretty much unnecessary if window titlebar is enabled */
+
+/* This file should preferably be imported before other stylesheets */
+
+/* Defaults for window controls on RIGHT side of the window */
+/* Modify these values to match your preferences */
+:root:is([tabsintitlebar], [sizemode="fullscreen"]) {
+  --uc-window-control-width: 138px; /* Space reserved for window controls (Win10) */
+  /* Extra space reserved on both sides of the nav-bar to be able to drag the window */
+  --uc-window-drag-space-pre: 30px; /* left side*/
+  --uc-window-drag-space-post: 30px; /* right side*/
 }
 
+:root:is([tabsintitlebar][sizemode="maximized"], [sizemode="fullscreen"]) {
+  --uc-window-drag-space-pre: 0px; /* Remove pre space */
+}
 
-/* #toolbar-menubar #menubar-items {
-  background: orange !important;
-} */
+@media  (-moz-platform: windows-win7),
+        (-moz-platform: windows-win8){
+  :root:is([tabsintitlebar], [sizemode="fullscreen"]) {
+    --uc-window-control-width: 105px;
+  }
+}
 
-/* #toolbar-menubar .titlebar-button {
-  z-index: 1001 !important;
-} */
+@media (-moz-gtk-csd-available) {
+  :root:is([tabsintitlebar],[sizemode="fullscreen"]) {
+    --uc-window-control-width: 84px;
+  }
+}
+@media (-moz-platform: macos){
+  :root:is([tabsintitlebar],[sizemode="fullscreen"]) {
+    --uc-window-control-width: 72px;
+  }
+}
 
+.titlebar-buttonbox, #window-controls{ color: var(--toolbar-color) }
+:root[sizemode="fullscreen"] .titlebar-buttonbox-container{ display: none }
+:root[sizemode="fullscreen"] #navigator-toolbox { position: relative; }
 
-.titlebar-buttonbox-container {
-/*   background: orange !important; */
+:root[sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container:last-child,
+:root[sizemode="fullscreen"] #window-controls{
+  position: absolute;
+  display: flex;
+  top: 0;
+  right:0;
+  height: 40px;
+}
+
+:root[sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container:last-child,
+:root[uidensity="compact"][sizemode="fullscreen"] #window-controls{ height: 32px }
+
+#nav-bar{
+  border-inline: var(--uc-window-drag-space-pre,0px) solid transparent;
+  border-inline-style: solid !important;
+  border-right-width: calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-post,0px));
+  background-clip: border-box !important;
+}
+
+/* Rules for window controls on left layout */
+@media (-moz-bool-pref: "userchrome.force-window-controls-on-left.enabled"),
+       (-moz-gtk-csd-reversed-placement),
+       (-moz-platform: macos){
+  :root[tabsintitlebar="true"] #nav-bar{
+    border-inline-width: calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-post,0px)) var(--uc-window-drag-space-pre,0px)
+  }
+  :root[sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container:last-child,
+  :root[sizemode="fullscreen"] #window-controls{ right: unset }
+}
+@media (-moz-bool-pref: "userchrome.force-window-controls-on-left.enabled"){
+  .titlebar-buttonbox-container{
+    order: -1 !important;
+  }
+  .titlebar-buttonbox{
+    flex-direction: row-reverse;
+  }
+}
+
+/* This pref can be used to force window controls on left even if that is not normal behavior on your OS */
+@supports -moz-bool-pref("userchrome.force-window-controls-on-left.enabled"){
+  :root[tabsintitlebar="true"] #nav-bar{
+    border-inline-width: calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-post,0px)) var(--uc-window-drag-space-pre,0px)
+  }
+  :root[sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container:last-child,
+  :root[sizemode="fullscreen"] #window-controls{ right: unset; }
+  .titlebar-buttonbox-container{
+    order: -1 !important;
+  }
+  .titlebar-buttonbox{
+    flex-direction: row-reverse;
+  }
+}
+
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/toolbars_below_content.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Moves tabs toolbar, bookmarks toolbar and main toolbar to the bottom of the window, and makes tabs be the bottom-most toolbar */
+
+/* By default, menubar will stay on top with two options to select it's behavior - see below */
+
+@-moz-document url(chrome://browser/content/browser.xhtml){
   
-/*   z-index: 1 !important; */
-  margin-left:-152px !important;
+  #titlebar{ -moz-appearance: none !important; }
+
+  #navigator-toolbox > div{ display: contents }
+  .global-notificationbox,
+  #mainPopupSet,
+  #browser,
+  #customization-container,
+  #tab-notification-deck{
+    order: -1;
+  }
+
+  /* Remove the next row if you want tabs to be the top-most row */
+  #titlebar{
+    order: 2;
+  } 
+
+  #toolbar-menubar{
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    top: 0px;
+    -moz-window-dragging: drag;
+  }
+  /* Remove bottom border that won't do anything useful when at bottom of the window */
+  #navigator-toolbox{ border-bottom: none !important; }
+
+  #toolbar-menubar > spacer{ flex-grow: 1 }
+
+  #urlbar[breakout][breakout-extend]{
+    display: flex !important;
+    flex-direction: column-reverse;
+    bottom: 0px !important; /* Change to 3-5 px if using compact_urlbar_megabar.css depending on toolbar density */
+    top: auto !important;
+  }
+
+  .urlbarView-body-inner{ border-top-style: none !important; }
+
+  /* Yeah, removes window controls. Likely not wanted on bottom row  */
+/*   #TabsToolbar > .titlebar-buttonbox-container{ display: none } */
+  #toolbar-menubar > .titlebar-buttonbox-container{ order: 1000 }
+
+  /* Fix panels sizing */
+  .panel-viewstack{ max-height: unset !important; }
+
+  /* Fullscreen mode support */
+  #navigator-toolbox[inFullscreen]{ margin-top: 0 !important }
+  #navigator-toolbox[inFullscreen][style*="margin-top"]{ visibility: collapse }
+  #fullscr-toggler{ bottom: 0; top: unset !important; }
+  
+  /* These three rules exist for compatibility with autohide_toolbox.css */
+  #navigator-toolbox{ bottom: 0px; transform-origin: bottom }
+  #main-window > body > box{ margin-top: 0 !important; }
+  #toolbar-menubar{ z-index: 1; background-color: var(--lwt-accent-color,black); }
+  
+  :root[BookmarksToolbarOverlapsBrowser] #navigator-toolbox{
+    margin-block: calc(-1 * var(--bookmarks-toolbar-height)) 0 !important;
+  }
+  :root[BookmarksToolbarOverlapsBrowser] .newTabBrowserPanel{
+    padding-block: 0 var(--bookmarks-toolbar-height) !important;
+  }
+  
+  /**************
+  Menubar options - By default, menubar is overlayed on top of web-content
+  ***************/
+
+ /* Uncomment the following if you want static menubar on top of the window (make menubar enabled)
+  * Use when menubar is enabled to always show it */
+  
+  /*
+  #browser,#customization-container{ padding-top: var(--uc-menubar-spacer,28px) }
+  */
+  
+  /* OR, uncomment the following if you want menubar to appear below content, above tabs toolbar */
+  
+  
+  #toolbar-menubar{ background: transparent !important; position: static; display: flex; margin-top: 0px !important; }
+ 
+
+  /* set to "column-reverse" (without quotes) if you want tabs above menubar with the above option */
+  #titlebar{ flex-direction: column-reverse }
 }
-/* ======================================================================= */
 
-/* Move bookmarks bar to top of the navigator toolbox before move to bttm */
-#PersonalToolbar {
-  -moz-box-ordinal-group: -1 !important;
-	order: -1 !important;
-}
-/* ======================================================================= */
+/* ================= START MODIFICATIONS HERE ================= */
 
-/* flip url bar contents so it displays properly when moving to bottom */
-#urlbar-container{
-	-moz-transform: scale(-1, -1) !important;
-	-o-transform: scale(-1,-1) !important;
-	-webkit-transform: scale(-1,-1) !important;
-	transform: scale(-1,-1) !important;
-}
-
-#urlbar{
-	-moz-transform: scale(-1, -1) !important;
-	-o-transform: scale(-1,-1) !important;
-	-webkit-transform: scale(-1,-1) !important;
-	transform: scale(-1,-1) !important;
-}
-
-/* ======================================================================= */
-
-/* ====== MOVE EVERYTHING TO THE BOTTOM, DO NOT EDIT THIS ====== */
-#navigator-toolbox {
-	-moz-box-ordinal-group: 1 !important;
-	order: 1 !important;
-}
-/* ======================================================================= */
-
-/* hide all contents of tab bar EXCEPT tab bar itself */
+/* hide everything BUT the window controls on tab bar */
 #TabsToolbar tab,
 #TabsToolbar-customization-target,
 #firefox-view-button,
 .tabs-alltabs-button {
     visibility: hidden !important;
-    background: var(--toolbar-bgcolor) !important;
+    background:transparent !important;
 }
-/* ======================================================================= */
+/* ----------------------------------------------------------- */
 
-/* allow tab bar to appear over nav bar */
-#TabsToolbar {
-/*   width:1499px !important; */
-  margin-left:1361px !important;
-/*   margin-right: 1000px !important; */
-/*   background: orange !important; */
-  z-index: 1000 !important;
-  margin-bottom: -42px;
-}
-/* ======================================================================= */
-
-/* hide sidebar header so vertical tabs look native */
-#sidebar-header{ display: none }
-/* ======================================================================= */
-
-/* make everything transparent when window is inactive */
-:root #navigator-toolbox:-moz-window-inactive {
-  opacity:0.25 !important;
-}
-/* ======================================================================= */
-
-/* Get user theme to show through on nav bar and bookmarks bar*/
-:root #nav-bar,
-:root #PersonalToolbar{
-  background: var(--toolbar-bg) !important;
-/*    background: green !important; */
+#TabsToolbar .titlebar-buttonbox-container {
+/*   background: purple !important; */
+  margin-top: 3px !important;
+  margin-bottom: 0px !important;
 }
 
-:root[BookmarksToolbarOverlapsBrowser] .newTabBrowserPanel {
-	visibility:visible !important;
+/* prep for window controls + move nav-bar into now empty tab bar */
+#nav-bar {
+/*   margin-left: 84px !important; */
+  margin-bottom:-44px !important;
+/*   margin-right: 144px !important; */
+/*   background: purple !important; */
 }
-/* ======================================================================= */
+
+#PersonalToolbar {
+  background: transparent !important;
+  order: -1;
+}
+/* ----------------------------------------------------------- */
 
 /* fix issue with bottom of window getting cut off when going into new tab */
 :root[BookmarksToolbarOverlapsBrowser] .newTabBrowserPanel {
@@ -109,36 +231,17 @@
 /*   background:orange !important; */
 }
 
-:root[BookmarksToolbarOverlapsBrowser] #nav-bar {
-   margin-bottom:28px; !important;
-}
-/* ======================================================================= */
+/* ----------------------------------------------------------- */
 
-/* Get toolbar configured such that the title bar buttons on there appear p much exactly over the ones on the tab bar */
-/* this gives the illusion that the title bar buttons don't move when the menu bar appears. */
-#toolbar-menubar #menubar-items{
+/* align window controls on tab bar and menu bar */
 
-  padding-top:5px !important;
-  padding-left: 10px !important;
-  margin-bottom:-42px !important;
-}
-
-#toolbar-menubar .titlebar-buttonbox {
-/*   background: blue !important; */
-/*   padding-top: 5px !important; */
-  z-index:10000 !important;
-/*   padding-bottom:5px; */
-  margin-bottom:-62px !important;
-}
-/* ======================================================================= */
-
-/*for now, hide the private browsing icon and label until i figure out how to move it to where i want */
-#private-browsing-indicator-with-label {
-  display: none !important;
-}
-/* ======================================================================= */
+/* ============================================================ */
 
 /* ======= =sidebar hover hack =======*/
+/* hide sidebar header so vertical tabs look native */
+#sidebar-header{ display: none }
+/* ======================================================================= */
+
 #sidebar-box{
   --uc-sidebar-width: 35px;
   --uc-sidebar-hover-width: 210px;
