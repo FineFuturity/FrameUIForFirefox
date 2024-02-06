@@ -24,10 +24,17 @@ A new way to view your web content, like looking at photos printed from an old P
 * Initial release
 
 # Known Issues
-**Windows:**
-* Haven't found any just yet.  Please report if you find any. :)
+* The entire area of the nav bar cannot be used to drag the window in the 0.3 update.
+  * I am still figuring out how MrOtherGuy's code works and should be able to fix this in the next update. 
+~~* Haven't found any just yet.  Please report if you find any. :)~~
+~~* Menu bar overlaps with the navigation bar when it's active.~~
+~~* The private browsing indicator icon is misaligned with the navigation bar when in private browsing mode.~~
+~~* The bookmarks toolbar pushes the navigation toolbar past the bottom window boundary if "Only Show on New Tab" was set.~~
+~~* When clicked, the address bar's URL text moves to the top of the results dropdown rather than staying in place~~
 
-**macOS:**
+
+
+**macOS NOTE:**
 * FrameUI was designed to have the window control buttons on the bottom. However, due to the way that fullscreen windows work on macOS, the window control buttons will remain at the top of the window like other macOS apps. This complication is not present in windowed mode.
 
 # Screenshots
