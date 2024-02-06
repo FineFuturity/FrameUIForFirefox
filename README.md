@@ -6,7 +6,7 @@ A new way to view your web content, like looking at photos printed from an old P
 # Changelog
 **Version 0.3:**
 * Better support for configurations where the title bar buttons are either on the left or right side of the window, regardless of OS.
-  * HUGE thanks to MrOtherGuy's CSS ![code](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/toolbars_below_content.css), without which I would not have been able to fix the below issues.
+  * HUGE thanks to MrOtherGuy's CSS ![code](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/toolbars_below_content.css), without which I would not have been able to fix this as well as the below issues.
 * Fixed issues with the menubar not playing nicely with the navigation bar when it's active.
 * Fixed issue with the private browsing indicator icon being misaligned with the navigation bar when in private browsing mode.
 * Fixed issue where the bookmarks toolbar would push the navigation toolbar past the bottom window boundary if "Only Show on New Tab" was set.
