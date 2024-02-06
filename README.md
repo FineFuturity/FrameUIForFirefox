@@ -41,7 +41,8 @@ A new way to view your web content, like looking at photos printed from an old P
 ![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/73b7328d-3b6c-47f6-b4fe-d341aa46b88b)
 ![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/ed6123fd-b6fd-4124-b264-a83468fa1bc8)
 ![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/3b7a9f63-6cae-43de-bfb0-d07fd28b8d10)
-![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/d1e02066-9fc3-4f5c-a3e5-d26e1ff115b2)
+![image](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/f64bbb3e-217e-4f78-a9fe-da2ebeb3b265)
+
 
 
 <h4>Now with theme support!</h4>
