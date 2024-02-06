@@ -4,6 +4,16 @@ A new way to view your web content, like looking at photos printed from an old P
 ![a1fd4499dd2be9a2ecccc660a6ce0696](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/75c5a475-d440-4481-a002-9cdb754155ed)
 
 # Changelog
+**Version 0.3:**
+* Better support for configurations where the title bar buttons are either on the left or right side of the window, regardless of OS.
+  * HUGE thanks to MrOtherGuy's CSS ![code](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/toolbars_below_content.css), without which I would not have fixed the below issues.
+* Fixed issues with the menubar not playing nicely with the navigation bar when it's active.
+* Fixed issue with the private browsing indicator icon being misaligned with the navigation bar when in private browsing mode.
+* Fixed issue where the bookmarks toolbar would push the navigation toolbar past the bottom window boundary if "Only Show on New Tab" was set.
+* When clicked, the address bar's URL text now stays at the bottom rather than moving to the top.
+  * This should make typing a URL or search term much less jarring.
+
+
 **Version 0.2:**
 * Initial macOS support.
   * Platform detection has been added, so the theme now accounts for configurations where either the title bar buttons are on the left (e.g., macOS/Linux title bar buttons on left) or on the right (e.g, Windows/Linux title bar buttons on right).
@@ -53,4 +63,8 @@ This theme is a step towards what I believe may solve the grand problem of unify
 FYI, this project is my first go at using CSS.  As this is the initial release on top of that, I anticipate there will be issues.  If you encounter any bugs or other issues, please post a thread and I'll do what I can, when I can. 
 
 Also: as this theme is a both a thought experiment and work in progress, it is possible the look and feel will change over time.  I welcome any and all suggestions for how this could be improved.  :)
+
+# Credits
+* HUGE SHOUTOUT to MrOtherGuy's ![Collection of random CSS hacks for Firefox](https://github.com/MrOtherGuy/firefox-csshacks) repo.
+* Private testers (who I can name here if they wish)
 
