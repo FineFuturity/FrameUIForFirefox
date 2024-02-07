@@ -6,7 +6,8 @@
 /* make everything transparent when window is inactive */
 :root #PersonalToolbar:-moz-window-inactive,
 :root #nav-bar:-moz-window-inactive,
-:root #toolbar-menubar:-moz-window-inactive{
+:root #toolbar-menubar:-moz-window-inactive,
+:root #titlebar:-moz-window-inactive{
   opacity:0.25 !important;
 }
 
