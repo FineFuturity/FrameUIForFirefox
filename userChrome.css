@@ -1,9 +1,16 @@
+/* make theming work */
+#navigator-toolbox {
+  --toolbar-bgcolor: transparent;
+}
+
 /* make everything transparent when window is inactive */
-:root #navigator-toolbox:-moz-window-inactive {
+:root #PersonalToolbar:-moz-window-inactive,
+:root #nav-bar:-moz-window-inactive,
+:root #toolbar-menubar:-moz-window-inactive{
   opacity:0.25 !important;
 }
 
-
+/* fix private browsing indicator icon in private browsing mode. */
 #private-browsing-indicator-with-label > label {
   visibility: collapse !important;
 }
