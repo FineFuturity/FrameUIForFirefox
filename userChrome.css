@@ -201,8 +201,9 @@ See the above repository for updates as well as full license text. */
   */
   
   /* OR, uncomment the following if you want menubar to appear below content, above tabs toolbar */
-  
-  
+
+  /* add padding to left side of menu bar itmes to align with bookmarks and nav bar */
+  #toolbar-menubar #menubar-items {padding-left: 10px !important;}
   #toolbar-menubar{ background: transparent !important; position: static; display: flex; margin-top: 0px !important; }
  
 
