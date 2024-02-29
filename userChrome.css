@@ -84,6 +84,7 @@ See the above repository for updates as well as full license text. */
   border-inline-style: solid !important;
   border-right-width: calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-post,0px));
   background-clip: border-box !important;
+  z-index: 100 !important;
 }
 
 /* Rules for window controls on left layout */
