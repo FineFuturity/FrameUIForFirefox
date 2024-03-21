@@ -6,8 +6,9 @@ A new way to view your web content, like looking at photos printed from an old P
 # Changelog
 **Version 0.3a:**
 * The latest Firefox update caused some issues with clicking on interface elements, including the window controls.  The latest update to the theme fixes this issue.
-* Fixed the alignment of the private browsing indicator when in private browsing mode.
   * I'm not sure if the update caused any other issues, so please report them as you see them.  
+* Fixed the alignment of the private browsing indicator when in private browsing mode.
+ 
 
 **Version 0.3:**
 * Better support for configurations where the title bar buttons are either on the left or right side of the window, regardless of OS.
