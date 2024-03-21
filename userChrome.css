@@ -38,7 +38,7 @@ See the above repository for updates as well as full license text. */
   --uc-window-control-width: 138px; /* Space reserved for window controls (Win10) */
   /* Extra space reserved on both sides of the nav-bar to be able to drag the window */
   --uc-window-drag-space-pre: 30px; /* left side*/
-  --uc-window-drag-space-post: 30px; /* right side*/
+  --uc-window-drag-space-post: -30px; /* right side*/
 }
 
 :root:is([tabsintitlebar][sizemode="maximized"], [sizemode="fullscreen"]) {
@@ -82,9 +82,12 @@ See the above repository for updates as well as full license text. */
 #nav-bar{
   border-inline: var(--uc-window-drag-space-pre,0px) solid transparent;
   border-inline-style: solid !important;
-  border-right-width: calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-post,0px));
+/*   border-right-width: calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-post,0px)); */
+  border-right-width: calc( var(--uc-window-control-width,0px)/4 + var(--uc-window-drag-space-post,0px));
+  margin-right: var(--uc-window-control-width) !important;
   background-clip: border-box !important;
-  z-index: 100 !important;
+  z-index:100 !important;
+/*   background: orange !important; */
 }
 
 /* Rules for window controls on left layout */
@@ -214,6 +217,10 @@ See the above repository for updates as well as full license text. */
 }
 
 /* ================= START MODIFICATIONS HERE ================= */
+
+.titlebar-buttonbox{
+  z-index: 10000 !important;
+}
 
 /* hide everything BUT the window controls on tab bar */
 #TabsToolbar tab,
