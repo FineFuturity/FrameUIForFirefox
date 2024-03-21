@@ -19,7 +19,10 @@
 #private-browsing-indicator-with-label {
   visibility: visible !important;
   z-index: 1 !important;
-  margin-top: 6px !important;
+  margin-top: 4px !important;
+  margin-right: 1px !important;
+  transform: scale(0.9) !important;
+/*   background: orange !important; */
 }
 
 /* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/window_control_placeholder_support.css made available under Mozilla Public License v. 2.0
@@ -83,7 +86,7 @@ See the above repository for updates as well as full license text. */
   border-inline: var(--uc-window-drag-space-pre,0px) solid transparent;
   border-inline-style: solid !important;
 /*   border-right-width: calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-post,0px)); */
-  border-right-width: calc( var(--uc-window-control-width,0px)/4 + var(--uc-window-drag-space-post,0px));
+  border-right-width: calc( var(--uc-window-control-width,0px)/3 + var(--uc-window-drag-space-post,0px));
   margin-right: var(--uc-window-control-width) !important;
   background-clip: border-box !important;
   z-index:100 !important;
