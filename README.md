@@ -4,6 +4,12 @@ A new way to view your web content, like looking at photos printed from an old P
 ![a1fd4499dd2be9a2ecccc660a6ce0696](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/75c5a475-d440-4481-a002-9cdb754155ed)
 
 # Changelog
+**Version 0.3b:**
+* 12/2/2024 emergency release - The recently released Firefox update caused all toolbar elements to disappear, causing FrameUI to become unusable.  This emergency release restores core functionality while I work on fixing the lingering issues below for the next update.
+* Lingering issues:
+ * The private browsing icon was shifted left and associated label came back.
+ * The menu bar is no longer underneath the address bar.  
+  
 **Version 0.3a:**
 * The latest Firefox update caused some issues with clicking on interface elements, including the window controls.  The latest update to the theme fixes this issue.
   * I'm not sure if the update caused any other issues, so please report them as you see them.  
