@@ -13,12 +13,13 @@
 
 /* fix private browsing indicator icon in private browsing mode. */
 #private-browsing-indicator-with-label > label {
-  visibility: collapse !important;
+  visibility: none !important;
 }
 
 #private-browsing-indicator-with-label {
   visibility: visible !important;
   z-index: 1 !important;
+  margin-left: -6px !important;
   margin-top: 4px !important;
   margin-right: 6px !important;
   transform: scale(0.9) !important;
@@ -136,7 +137,7 @@ See the above repository for updates as well as full license text. */
 
 @-moz-document url(chrome://browser/content/browser.xhtml){
   
-  #titlebar{ -moz-appearance: none !important; }
+  #titlebar { -moz-appearance: none !important; }
 
   #navigator-toolbox > div{ display: contents }
   .global-notificationbox,
@@ -149,7 +150,7 @@ See the above repository for updates as well as full license text. */
 
   /* Remove the next row if you want tabs to be the top-most row */
   #titlebar{
-    order: 2;
+    order: -2;
   } 
 
   #toolbar-menubar{
@@ -175,7 +176,7 @@ See the above repository for updates as well as full license text. */
 
   /* Yeah, removes window controls. Likely not wanted on bottom row  */
 /*   #TabsToolbar > .titlebar-buttonbox-container{ display: none } */
-  #toolbar-menubar > .titlebar-buttonbox-container{ order: 1000 }
+  #toolbar-menubar > .titlebar-buttonbox-container{ order: -5 }
 
   /* Fix panels sizing */
   .panel-viewstack{ max-height: unset !important; }
@@ -211,7 +212,7 @@ See the above repository for updates as well as full license text. */
   /* OR, uncomment the following if you want menubar to appear below content, above tabs toolbar */
 
   /* add padding to left side of menu bar itmes to align with bookmarks and nav bar */
-  #toolbar-menubar #menubar-items {padding-left: 10px !important;}
+  #toolbar-menubar #menubar-items { padding-left: 10px !important; padding-top:10px !important; padding-bottom:10px !important; }
   #toolbar-menubar{ background: transparent !important; position: static; display: flex; margin-top: 0px !important; }
  
 
@@ -237,14 +238,15 @@ See the above repository for updates as well as full license text. */
 
 #TabsToolbar .titlebar-buttonbox-container {
 /*   background: purple !important; */
-  margin-top: 3px !important;
+  margin-top: 0px !important;
   margin-bottom: 0px !important;
 }
 
 /* prep for window controls + move nav-bar into now empty tab bar */
 #nav-bar {
+  margin-top: -44px !important;
 /*   margin-left: 84px !important; */
-  margin-bottom:-44px !important;
+/*  margin-bottom:-44px !important;*/
 /*   margin-right: 144px !important; */
 /*   background: purple !important; */
 }
@@ -257,7 +259,7 @@ See the above repository for updates as well as full license text. */
 
 /* fix issue with bottom of window getting cut off when going into new tab */
 :root[BookmarksToolbarOverlapsBrowser] .newTabBrowserPanel {
-	margin-top:-28px !important;
+/*	margin-top:-28px !important;*/
 /*   background: orange !important; */
 	
 }
