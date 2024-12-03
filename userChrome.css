@@ -1,3 +1,5 @@
+#sidebar-main {visibility: collapse !important;}
+
 /* make theming work */
 #navigator-toolbox {
   --toolbar-bgcolor: transparent;
@@ -7,7 +9,8 @@
 :root #PersonalToolbar:-moz-window-inactive,
 :root #nav-bar:-moz-window-inactive,
 :root #toolbar-menubar:-moz-window-inactive,
-:root #titlebar:-moz-window-inactive{
+:root #titlebar:-moz-window-inactive,
+:root #urlbar:-moz-window-inactive{
   opacity:0.25 !important;
 }
 
@@ -137,7 +140,7 @@ See the above repository for updates as well as full license text. */
 
 @-moz-document url(chrome://browser/content/browser.xhtml){
   
-  #titlebar { -moz-appearance: none !important; }
+/*   #titlebar { -moz-appearance: none !important; } */
 
   #navigator-toolbox > div{ display: contents }
   .global-notificationbox,
@@ -145,12 +148,12 @@ See the above repository for updates as well as full license text. */
   #browser,
   #customization-container,
   #tab-notification-deck{
-    order: -1;
+    order: -1 !important;
   }
 
   /* Remove the next row if you want tabs to be the top-most row */
   #titlebar{
-    order: -2;
+    order: -2 !important;
   } 
 
   #toolbar-menubar{
@@ -159,6 +162,7 @@ See the above repository for updates as well as full license text. */
     width: 100vw;
     top: 0px;
     -moz-window-dragging: drag;
+    order: 1 !important;
   }
   /* Remove bottom border that won't do anything useful when at bottom of the window */
   #navigator-toolbox{ border-bottom: none !important; }
@@ -290,7 +294,7 @@ See the above repository for updates as well as full license text. */
   min-width: var(--uc-sidebar-width) !important;
   width: var(--uc-sidebar-width) !important;
   max-width: var(--uc-sidebar-width) !important;
-  z-index:1;
+  z-index: 3 !important;
 }
 
 #sidebar-box[positionend]{ direction: rtl }
@@ -364,3 +368,4 @@ See the above repository for updates as well as full license text. */
 }
 
 /* ======= =sidebar hover hack =======*/
+
