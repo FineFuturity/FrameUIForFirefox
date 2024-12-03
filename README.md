@@ -4,6 +4,10 @@ A new way to view your web content, like looking at photos printed from an old P
 ![a1fd4499dd2be9a2ecccc660a6ce0696](https://github.com/FineFuturity/FrameUIForFirefox/assets/19298107/75c5a475-d440-4481-a002-9cdb754155ed)
 
 # Changelog
+**Version 0.3c:**
+* the new sidebar introduced in the most recent update broke third-party vertical tab compatibility and the auto-hover css code.  functionality has been restored and vertical tab extensions should work again.
+  * native vertical tab support was introduced in the latest firefox update, which is baked into the new sidebar when you enable it in about:config.  Compatbility with native vertical tabs will come in a future update. 
+
 **Version 0.3b:**
 * 12/2/2024 emergency release - The recently released Firefox update caused all toolbar elements to disappear, causing FrameUI to become unusable.  This emergency release restores core functionality while I work on fixing the lingering issues below for the next update.
 * Lingering issues:
