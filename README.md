@@ -5,6 +5,7 @@ A new way to view your web content, like looking at photos printed from an old P
 
 # Changelog
 **Version 0.3c:**
+* issues noted for fixing in the 0.3b release notes have been fixed.
 * the new sidebar introduced in the most recent update broke third-party vertical tab compatibility and the auto-hover css code.  functionality has been restored and vertical tab extensions should work again.
   * native vertical tab support was introduced in the latest firefox update, which is baked into the new sidebar when you enable it in about:config.  Compatbility with native vertical tabs will come in a future update. 
 
