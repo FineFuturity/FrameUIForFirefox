@@ -12,16 +12,16 @@
 }
 
 /* fix private browsing indicator icon in private browsing mode. */
-#private-browsing-indicator-with-label > label {
-  visibility: none !important;
+.private-browsing-indicator-with-label > label {
+  visibility: hidden !important;
 }
 
-#private-browsing-indicator-with-label {
+.private-browsing-indicator-with-label {
   visibility: visible !important;
   z-index: 1 !important;
-  margin-left: -6px !important;
-  margin-top: 4px !important;
-  margin-right: 6px !important;
+/*   margin-left: 0px !important; */
+  margin-top: -4px !important;
+  margin-right: -92px !important;
   transform: scale(0.9) !important;
 /*   background: orange !important; */
 }
@@ -167,7 +167,7 @@ See the above repository for updates as well as full license text. */
 
   #urlbar[breakout][breakout-extend]{
     display: flex !important;
-    flex-direction: column-reverse;
+    flex-direction: column-reverse !important;
     bottom: 0px !important; /* Change to 3-5 px if using compact_urlbar_megabar.css depending on toolbar density */
     top: auto !important;
   }
